@@ -1,0 +1,149 @@
+body{
+    background-color: skyblue;
+}
+.main{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+section{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+input[name="to-do-item"]{
+    margin: 5px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.category{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+.category label{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+input[type="radio"], input[type="checkbox"]{
+    display: none;
+}
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px red;
+
+}
+.bubble.personal{
+    border-color: green;
+    box-shadow: 0px 0px 10px green;
+}
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: red;
+    box-shadow: 0px 0px 10px red;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+.bubble.personal::after{
+    background-color: green;
+    box-shadow: 0px 0px 10px green;
+}
+input:checked ~ .bubble::after{
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+}
+.category label div{
+    font-weight: bold;
+}
+input[type="submit"]{
+    display: inline;
+    width: 100%;
+    background-color: rgba(247, 129, 218, 0.75);
+    box-shadow: 0px 0px 10px rgb(247,129,218);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+input[type="submit"]:hover{
+    background-color: rgba(247, 129, 218, 1);
+}
+#list{
+    text-align: center;
+    font-weight: bold;
+}
+.to-do-item div button, .to-do-content{
+    border: none;
+    outline: none;
+    background: none;
+}
+.to-do-item{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px;
+    padding: 10px;
+}
+.to-do-item span{
+    margin: 2px;
+    margin-right: 20px;
+}
+.to-do-content{
+    flex: 1 1 0%;
+}
+.action button{
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.action .edit{
+    background-color: rgba(241, 50, 238,0.75);
+    padding: 5px 8px;
+    margin-right: 5px;
+}
+.action .delete{
+    background-color: rgba(255,0,0,0.75);
+    padding: 5px 8px;
+}
+.action .edit:hover{
+    background-color: rgba(241, 50, 238,1);
+}
+.action .delete:hover{
+    background-color: rgba(255,0,0,1);
+}
+.to-do-item.done .to-do-content{
+    text-decoration: line-through;
+    color: grey;
+}
+.addnew input{
+    color: black;
+    font-size: large;
+}
+li{
+    list-style: none;
+}

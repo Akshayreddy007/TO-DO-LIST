@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo List</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="icon" href="images/to-do-list.png">
+    </head>
+    <body>
+        <main class="main">TO-DO LIST</main>
+        <section id="create-to-do">
+            <h3>Create a TO-DO List</h3>
+            <form id="to-do-form">
+                <input type="text" name="to-do-item" id="additem" placeholder="Create a To-Do Item ">
+                <h3>Choose a Category</h3>
+                <div class="category">
+                    <label>
+                        <input type="radio" value="Business" id="business" name="category">
+                        <span class="bubble business"></span>
+                        <div>Business</div>
+                    </label>
+                    <label>
+                        <input type="radio" value="Personal" id="personal" name="category">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+                <input type="submit" value="ADD TO-DO">
+            </form>
+        </section>
+        <h3 id="list">TO-DO List</h3>
+        <section id="to-do-list">
+            <!--<div class="to-do-item">
+                <label>
+                    <input type="checkbox">
+                    <span class="bubble business"></span>
+                </label>
+                <input type="text" class="to-do-content" value="make a video" readonly>
+                <div class="action">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </div>
+            </div>
+            <div class="to-do-item">
+                <label>
+                    <input type="checkbox">
+                    <span class="bubble personal"></span>
+                </label>
+                <input type="text" class="to-do-content" value="get some groceries" readonly>
+                <div class="action">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </div>
+            </div>-->
+        </section>
+        <script src="jquery.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
